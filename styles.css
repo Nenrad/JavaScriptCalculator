@@ -1,0 +1,25 @@
+body {
+  background-color: blue;
+  text-align: center;
+  padding: 100px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 2rem);
+}
+
+.btn:nth-child(18) {
+  grid-column: span 2;
+}
+
+#display {
+  grid-column: span 4;
+}
+
+.calculator {
+  margin: auto;
+  width: 128px;
+  transform: scale(200%);
+  box-shadow: 0px 0px 0px 10px;
+}

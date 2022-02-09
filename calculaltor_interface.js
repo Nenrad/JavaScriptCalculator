@@ -21,5 +21,5 @@ resetBtnElement.addEventListener("click", function () {
 
 equalsBtnElement.addEventListener("click", function () {
   let answer = calculate(display.getAttribute("value"));
-  display.setAttribute("value", `=${answer}`);
+  display.setAttribute("value", `${answer}`);
 });

@@ -5,7 +5,18 @@ const btnElements = document.getElementsByClassName("btn");
 const resetBtnElement = document.getElementById("btn--reset");
 const equalsBtnElement = document.getElementById("btn--equals");
 
-for (let i = 0; i < btnElements.length; i++) {
+btnElements[0].addEventListener("click", function () {
+  var copyText = display;
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied to clipboard");
+});
+
+for (let i = 1; i < btnElements.length; i++) {
   btnElements[i].addEventListener("click", function () {
     let currentValue = display.getAttribute("value");
     display.setAttribute(

@@ -1,8 +1,12 @@
-export var stringToArray = (string) => {
+export var stringToArray = (str) => {
   let stringArray = [];
-  let offset = 0;
   let currentElement;
   let j = 0;
+  const minus = "0";
+  let string = str;
+  if (str[0] === "-") {
+    string = minus.concat(str);
+  }
   for (let i = 0; i < string.length - 1; i++) {
     if (isNaN(string[i]) && string[i] != ".") {
       stringArray.push(string[i]);
